@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+@theme {
+  /* Strict 3-Color Palette Tokens (Darker Plum & Darker Luxora) */
+  --color-silver: #D9DCE2;
+  --color-silver-light: #EEF0F4;
+  --color-silver-dark: #B8BCC6;
+
+  --color-plum: #521F35;
+  --color-plum-dark: #381323;
+  --color-plum-deep: #2C0D1B;
+  --color-plum-surface: #44182B;
+  --color-plum-card: #4E1B31;
+  --color-plum-gloss: #61243E;
+
+  --color-luxora: #9E5370;
+  --color-luxora-hover: #B26483;
+  --color-luxora-soft: #C47C99;
+
+  --color-luxura: #9E5370;
+  --color-luxura-hover: #B26483;
+  --color-luxura-soft: #C47C99;
+
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+:root {
+  --color-shiny-silver: #D9DCE2;
+  --color-shiny-plum: #521F35;
+  --color-luxora: #9E5370;
+
+  --bg-primary: #521F35;
+  --bg-surface: #44182B;
+  --bg-card: #4E1B31;
+  --bg-deep: #2C0D1B;
+
+  --text-primary: #D9DCE2;
+  --text-accent: #9E5370;
+  --border-silver: rgba(217, 220, 226, 0.22);
+
+  font-family: var(--font-sans);
+  color-scheme: dark;
+  background-color: #381323;
+  color: #D9DCE2;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #381323;
+  color: #D9DCE2;
+  background-image: 
+    radial-gradient(ellipse 80% 60% at 50% -20%, rgba(82, 31, 53, 0.7), transparent),
+    radial-gradient(ellipse 60% 40% at 85% 85%, rgba(158, 83, 112, 0.12), transparent),
+    radial-gradient(ellipse 50% 50% at 15% 50%, rgba(82, 31, 53, 0.35), transparent);
+  background-attachment: fixed;
+}
+
+/* Polished Metallic Silver & Deep Plum Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2C0D1B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9E5370;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B26483;
+}
+
+/* Selection in Luxora on Deep Plum */
+::selection {
+  background: #9E5370;
+  color: #2C0D1B;
+}
+
+/* Subtle Continuous Floating and Drift Animations */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-14px) rotate(0.4deg);
+  }
+}
+
+@keyframes floatReverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(14px) rotate(-0.4deg);
+  }
+}
+
+@keyframes pulseSubtle {
+  0%, 100% {
+    opacity: 0.18;
+  }
+  50% {
+    opacity: 0.38;
+  }
+}
+
+@keyframes dashFlow {
+  to {
+    stroke-dashoffset: -32;
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 14s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: floatReverse 16s ease-in-out infinite;
+}
+
+.animate-pulse-subtle {
+  animation: pulseSubtle 7s ease-in-out infinite;
+}
+
+.animate-dash-flow {
+  animation: dashFlow 20s linear infinite;
+}
+
